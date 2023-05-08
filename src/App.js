@@ -1,14 +1,18 @@
 import "./App.css";
+import Header from "./components/Header";
+import Profile from "./components/Profile";
+import Welcome from "./components/Welcome";
+import Trends from "./components/Trends";
 
 function App() {
   return (
     <div className="App">
-      <div>Burcu</div>
-      <div>Egemen</div>
-      <div>Salim</div>
-      <div>Dogan</div>
-      <div>21</div>
-      <div>bburcu</div>
+      <Header />
+      <div className="body-main">
+        <Profile />
+        <Welcome />
+        <Trends />
+      </div>
     </div>
   );
 }
