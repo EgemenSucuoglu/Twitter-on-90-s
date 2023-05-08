@@ -7,6 +7,7 @@ function App() {
       <div>Egemen</div>
       <div>Salim</div>
       <div>Dogan</div>
+      <div>1</div>
     </div>
   );
 }
