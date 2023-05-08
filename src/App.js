@@ -8,6 +8,7 @@ function App() {
       <div>Salim</div>
       <div>Dogan</div>
       <div>1</div>
+      <div>Ben de buradayım</div>
     </div>
   );
 }
