@@ -6,6 +6,7 @@ function App() {
       <div>Burcu</div>
       <div>Egemen</div>
       <div>Salim</div>
+      <div>Dogan</div>
     </div>
   );
 }
