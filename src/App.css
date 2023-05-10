@@ -58,17 +58,21 @@
 
 .middle {
   width: 50%;
+
+  height: 30px;
 }
 
 .alt {
   display: flex;
   justify-content: space-around;
+  height: 50%;
 
   background-color: red;
 }
 
 .body-main {
   display: flex;
+  height: 100%;
 }
 .header {
   display: flex;
@@ -76,5 +80,5 @@
 }
 .feed {
   overflow: scroll;
-  height: 30%;
+  height: 500px;
 }
