@@ -1,0 +1,36 @@
+.tweet-main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tweet-box input {
+  width: 100%;
+  padding: 33px;
+  border-radius: 5px;
+  color: #791ece;
+  background-color: #f7e61c;
+}
+.tweet-box div {
+  color: #791ece;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.tweet-button button {
+  background-color: #f7e61c;
+  padding: 10px;
+  border-radius: 10px;
+}
+.tweet-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.colors {
+  background-color: #d7abff;
+  background-color: #fad2cb;
+  background-color: #f7e61c;
+  color: #9bebd0;
+  color: #ffffff;
+}
