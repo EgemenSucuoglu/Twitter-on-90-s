@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import Header from "./Header.css";
 
 export default function CreateTweet() {
   const { handleSubmit, register } = useForm({});

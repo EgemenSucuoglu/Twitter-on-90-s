@@ -1,0 +1,83 @@
+.header {
+  display: flex;
+  border: 1px solid #f7e61c;
+  background-color: #fad2cb;
+  padding: 5px 5px;
+}
+
+.header-title {
+  font-weight: bold;
+  color: #791ece;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left img {
+  padding: 1px;
+  height: 40px;
+  width: 40px;
+  background-color: #791ece;
+  border-radius: 15%;
+}
+
+.header-right {
+  display: flex;
+  margin: 3px;
+}
+
+.header-right img {
+  padding: 0.5px;
+  height: 40px;
+  width: 40px;
+  background-color: #791ece;
+  border-radius: 45%;
+  margin: 3px 10px;
+}
+
+.header-right * {
+  margin: 0 5px;
+}
+
+.header-home {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10%;
+}
+
+.header-home img {
+  padding: 0.5px;
+  height: 40px;
+  width: 40px;
+  background-color: #791ece;
+  border-radius: 45%;
+}
+
+.header-home button {
+  font-weight: bold;
+  color: #791ece;
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header-right-icon {
+  display: flex;
+  padding: 0.5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 15%;
+}
+
+.colors {
+  background-color: #d7abff;
+  background-color: #fad2cb;
+  background-color: #f7e61c;
+  color: #9bebd0;
+  color: #ffffff;
+}
