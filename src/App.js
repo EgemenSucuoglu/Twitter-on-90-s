@@ -15,6 +15,7 @@ import { AppContext } from "./AppContext";
 
 function App() {
   const [trends, setTrends] = useState([]);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     axios
@@ -26,7 +27,7 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  const values = { trends };
+  const values = { trends, user, setUser };
 
   return (
     <>

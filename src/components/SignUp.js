@@ -1,15 +1,17 @@
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
 
 export default function SignUp() {
   //   const [email, setEmail] = useState();
   //   const [pass, setPass] = useState();
   //   const [name, setName] = useState();
   //   const [avatar, setAvatar] = useState();
+  const { user, setUser } = useContext(AppContext);
 
   const { handleSubmit, register } = useForm({});
-
   let history = useHistory();
 
   function gonder(data) {
@@ -18,13 +20,14 @@ export default function SignUp() {
       .then((res) => {
         localStorage.setItem("twitter90s", res.data.token);
         // toast.success("kayıt olndu");
-        console.log(res.data.token);
         setTimeout(() => {
           history.push("/");
         }, 1000);
+        setUser(res.data);
       })
       .catch((err) => console.log(err));
   }
+  console.log(user);
 
   return (
     <form onSubmit={handleSubmit(gonder)}>
@@ -52,8 +55,8 @@ export default function SignUp() {
             ></input>
 
             <input
-              {...register("avatar")}
-              type="text"
+              {...register("avatar_url")}
+              type="url"
               placeholder="Avatar Linki Giriniz"
             ></input>
           </div>

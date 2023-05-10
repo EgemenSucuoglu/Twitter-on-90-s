@@ -1,0 +1,18 @@
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 500px;
+  border: 1px solid black;
+  padding: 15px;
+  text-align: center;
+  background-color: #d7abff;
+}
+
+.colors {
+  background-color: #d7abff;
+  background-color: #fad2cb;
+  background-color: #f7e61c;
+  color: #9bebd0;
+  color: #ffffff;
+}
