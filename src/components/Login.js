@@ -10,7 +10,12 @@ export default function Login() {
   function gonder(data) {
     axios
       .post("https://wit-courses-api2.onrender.com/login", data)
-      .then(history.push("/homepage"))
+      .then((res) => {
+        if (res.status === 200) {
+          localStorage.setItem("twitter90s", res.data.token);
+          history.push("/homepage");
+        }
+      })
       .catch((err) => console.log(err));
   }
 
