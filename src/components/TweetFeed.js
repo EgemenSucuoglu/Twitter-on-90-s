@@ -19,23 +19,21 @@ export default function TweetFeed() {
   }
 
   return (
-    <div className="">
-      <div className="flex flex-col-reverse gap-2">
-        {entries.map((e) => (
-          <div
-            className="p-4 bg-neutral-100 rounded-md flex gap-2 items-center"
-            key={e.id}
+    <div className="feed flex flex-col-reverse gap-2">
+      {entries.map((e) => (
+        <div
+          className="p-4 bg-neutral-100 rounded-md flex gap-2 items-center"
+          key={e.id}
+        >
+          <span className="flex-1">{e.body}</span>
+          <span
+            className="text-sm cursor-pointer underline"
+            onClick={() => sil(e.id)}
           >
-            <span className="flex-1">{e.body}</span>
-            <span
-              className="text-sm cursor-pointer underline"
-              onClick={() => sil(e.id)}
-            >
-              Sil
-            </span>
-          </div>
-        ))}
-      </div>
+            Sil
+          </span>
+        </div>
+      ))}
     </div>
   );
 }

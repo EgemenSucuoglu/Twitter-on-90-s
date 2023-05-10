@@ -51,3 +51,30 @@
   flex-direction: column;
   gap: 10px;
 }
+.home-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.middle {
+  width: 50%;
+}
+
+.alt {
+  display: flex;
+  justify-content: space-around;
+
+  background-color: red;
+}
+
+.body-main {
+  display: flex;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.feed {
+  overflow: scroll;
+  height: 30%;
+}

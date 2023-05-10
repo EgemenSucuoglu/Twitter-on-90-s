@@ -38,17 +38,27 @@ function App() {
           <Route exact path="/signup">
             <SignUp />
           </Route>
-
-          <div className="body-main">
-            <Route path="/homepage">
+          <div className="home-main">
+            <div className="home-header">
               <Header />
-              <Profile />
-              <div className="middle-main">
-                <CreateTweet />
-                <TweetFeed />
-              </div>
-              <Trends />
-            </Route>
+            </div>
+            <div className="body-main">
+              <Route path="/homepage">
+                <div className="alt">
+                  <div className="home-profil">
+                    <Profile />
+                  </div>
+
+                  <div className="middle">
+                    <CreateTweet />
+                    <TweetFeed />
+                  </div>
+                  <div className="home-trends">
+                    <Trends />
+                  </div>
+                </div>
+              </Route>
+            </div>
           </div>
         </Switch>
       </AppContext.Provider>
