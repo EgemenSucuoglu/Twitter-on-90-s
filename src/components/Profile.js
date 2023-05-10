@@ -8,9 +8,9 @@ export default function Profile() {
   return (
     <div className="profile-main">
       <img src={user.avatar_url}></img>
-      <div>{user.name}</div>
-      <div>@{user.name}</div>
-      <div>{user.email}</div>
+      <div className="profile-title">{user.name}</div>
+      <div className="profile-username">@{user.name}</div>
+      <div className="profile-email">{user.email}</div>
       <div className="profile-follow">
         <div className="profile-following">
           <div>2540</div>

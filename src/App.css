@@ -7,6 +7,11 @@
   background-color: bisque;
 } */
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .login-main {
   display: flex;
   flex-direction: column;
@@ -54,6 +59,7 @@
 .home-main {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
 }
 
 .middle {
@@ -66,6 +72,7 @@
   justify-content: space-around;
   height: 50%;
   /* background-color: red; */
+  background-color: #fad2cb;
 }
 
 .body-main {

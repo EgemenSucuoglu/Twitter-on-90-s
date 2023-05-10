@@ -2,11 +2,42 @@
   display: flex;
   flex-direction: column;
   width: 250px;
-  height: 500px;
+  height: 400px;
   border: 1px solid black;
   padding: 15px;
   text-align: center;
   background-color: #d7abff;
+}
+
+.profile-main img {
+  padding: 5px;
+  background-color: #f7e61c;
+}
+
+.profile-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.profile-username {
+  font-weight: bold;
+}
+
+.profile-email {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.profile-follow {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #f7e61c;
+  border: 2px solid #f7e61c;
 }
 
 .colors {
