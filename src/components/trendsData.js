@@ -26,7 +26,7 @@ export const trendsData = [
   },
   {
     id: 6,
-    title: "#memurhesapsoracaj",
+    title: "#memurhesapsoracak",
     tweetNumber: "42.3K Tweets",
   },
   {
