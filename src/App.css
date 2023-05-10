@@ -1,11 +1,11 @@
-.App {
+/* .App {
   display: flex;
   height: 100vh;
   text-align: center;
   justify-content: center;
   flex-direction: column;
   background-color: bisque;
-}
+} */
 
 .login-main {
   display: flex;
@@ -58,7 +58,6 @@
 
 .middle {
   width: 50%;
-
   height: 30px;
 }
 
