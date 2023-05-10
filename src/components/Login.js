@@ -5,56 +5,45 @@ import { useForm } from "react-hook-form";
 export default function Login() {
   const { handleSubmit, register } = useForm({});
 
-  let history = useHistory();
+  const history = useHistory();
 
   function gonder(data) {
     axios
       .post("https://wit-courses-api2.onrender.com/login", data)
       .then((res) => {
-        if (res.status === 200) {
-          localStorage.setItem("twitter90s", res.data.token);
+        localStorage.setItem("twitter90s", res.data.token);
+        //  toast.success("kayıt olundu");
+        setTimeout(() => {
           history.push("/homepage");
-        }
-      })
-      .catch((err) => console.log(err));
+        }, 1000);
+      });
   }
 
   return (
-    <form onSubmit={handleSubmit(gonder)}>
-      <div className="container mt-5 col-6 mx-auto">
-        <div className="card">
-          <div className="card-header bg-info">
-            <h2>Login</h2>
+    <div className="login-main">
+      <form onSubmit={handleSubmit(gonder)}>
+        <div>
+          <h2>Login</h2>
+
+          <div className="login-inputs">
+            <input
+              {...register("email")}
+              type="email"
+              placeholder="Email Adresinizi Giriniz"
+            ></input>
+
+            <input
+              {...register("password")}
+              type="password"
+              placeholder="Şifrenizi Giriniz"
+            ></input>
           </div>
-          <div className="card-body">
-            <form method="post">
-              <div className="form-group">
-                <label for="Email"></label>
-                <input
-                  {...register("email")}
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  placeholder="Email Adresinizi Giriniz"
-                ></input>
-              </div>
-              <div className="form-group">
-                <label for="Şifre"></label>
-                <input
-                  {...register("password")}
-                  type="password"
-                  className="form-control"
-                  name="sifre"
-                  placeholder="Şifrenizi Giriniz"
-                ></input>
-              </div>
-            </form>
-          </div>
-          <div>
+          <div className="login-buttons">
+            <button onClick={() => history.push("/signup")}> Kayıt Ol </button>
             <button> Gonder </button>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }

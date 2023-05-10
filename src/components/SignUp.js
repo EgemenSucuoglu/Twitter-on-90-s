@@ -15,66 +15,50 @@ export default function SignUp() {
   function gonder(data) {
     axios
       .post("https://wit-courses-api2.onrender.com/signup", data)
-      .then(history.push("/login"))
+      .then((res) => {
+        localStorage.setItem("twitter90s", res.data.token);
+        // toast.success("kayıt olndu");
+        console.log(res.data.token);
+        setTimeout(() => {
+          history.push("/");
+        }, 1000);
+      })
       .catch((err) => console.log(err));
   }
 
   return (
     <form onSubmit={handleSubmit(gonder)}>
-      <div className="container mt-5 col-6 mx-auto">
-        <div className="card">
-          <div className="card-header bg-info">
-            <h2>Sign up</h2>
-          </div>
-          <div className="card-body">
-            <form method="post">
-              <div className="form-group">
-                <label for="isim"></label>
-                <input
-                  {...register("name")}
-                  type="text"
-                  className="form-control"
-                  name="isim"
-                  placeholder="Isim Giriniz"
-                ></input>
-              </div>
-              <div className="form-group">
-                <label for="Email"></label>
-                <input
-                  {...register("email")}
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  placeholder="Email Adresinizi Giriniz"
-                ></input>
-              </div>
-              <div className="form-group">
-                <label for="Şifre"></label>
-                <input
-                  {...register("password")}
-                  type="password"
-                  className="form-control"
-                  name="sifre"
-                  placeholder="Şifrenizi Giriniz"
-                ></input>
-              </div>
+      <div className="signup-main">
+        <div>
+          <h2>Kayıt Ol</h2>
 
-              <div className="form-group">
-                <label for="avatar"></label>
-                <input
-                  {...register("avatar")}
-                  type="text"
-                  className="form-control"
-                  name="avatar"
-                  placeholder="Avatar Linki Giriniz"
-                ></input>
-              </div>
-            </form>
-          </div>
-          <div>
-            <button> Gonder </button>
+          <div className="sign-body">
+            <input
+              {...register("name")}
+              type="text"
+              placeholder="Isim Giriniz"
+            ></input>
+
+            <input
+              {...register("email")}
+              type="email"
+              placeholder="Email Adresinizi Giriniz"
+            ></input>
+
+            <input
+              {...register("password")}
+              type="password"
+              placeholder="Şifrenizi Giriniz"
+            ></input>
+
+            <input
+              {...register("avatar")}
+              type="text"
+              placeholder="Avatar Linki Giriniz"
+            ></input>
           </div>
         </div>
+        <button> Gonder </button>
       </div>
     </form>
   );

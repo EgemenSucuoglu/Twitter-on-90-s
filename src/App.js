@@ -29,29 +29,30 @@ function App() {
   const values = { trends };
 
   return (
-    <AppContext.Provider value={values}>
-      <div className="App">
-        <Header />
-        <div className="body-main">
-          <Profile />
-          <div className="middle-main">
-            <Switch>
-              <Route exact path="/">
-                <SignUp />
-              </Route>
-              <Route exact path="/login">
-                <Login />
-              </Route>
-              <Route path="/homepage">
+    <>
+      <AppContext.Provider value={values}>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
+          </Route>
+
+          <div className="body-main">
+            <Route path="/homepage">
+              <Header />
+              <Profile />
+              <div className="middle-main">
                 <CreateTweet />
                 <TweetFeed />
-              </Route>
-            </Switch>
+              </div>
+              <Trends />
+            </Route>
           </div>
-          <Trends />
-        </div>
-      </div>
-    </AppContext.Provider>
+        </Switch>
+      </AppContext.Provider>
+    </>
   );
 }
 
