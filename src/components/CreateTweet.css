@@ -6,10 +6,10 @@
 
 .tweet-box input {
   width: 100%;
-  padding: 33px;
+  padding: 25px;
   border-radius: 5px;
   color: #791ece;
-  background-color: #f7e61c;
+  background-color: #9bebd0;
 }
 .tweet-box div {
   color: #791ece;
