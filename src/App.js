@@ -15,7 +15,9 @@ import { AppContext } from "./AppContext";
 
 function App() {
   const [trends, setTrends] = useState([]);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("user")) || null
+  );
 
   useEffect(() => {
     axios

@@ -24,6 +24,7 @@ export default function SignUp() {
           history.push("/");
         }, 1000);
         setUser(res.data);
+        localStorage.setItem("user", JSON.stringify(data));
       })
       .catch((err) => console.log(err));
   }

@@ -19,20 +19,31 @@ body {
   height: 50vw;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  /* background-color: red; */
 }
+
+.login-main h2 {
+  font-weight: bold;
+  text-align: center;
+  color: #791ece;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
 .login-inputs {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 20px 0 20px 0;
+  border: 1px solid #f7e61c;
 }
 .login-buttons {
   display: flex;
   justify-content: space-between;
 }
 .login-buttons button {
-  background-color: blue;
+  background-color: #d7abff;
   border-radius: 5px;
   padding: 5px;
 }
@@ -43,10 +54,10 @@ body {
   height: 50vw;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  /* background-color: red; */
 }
 .signup-main button {
-  background-color: blue;
+  background-color: #d7abff;
   padding: 5px;
   margin-top: 10px;
   border-radius: 10px;
@@ -86,4 +97,12 @@ body {
 .feed {
   overflow: scroll;
   height: 450px;
+}
+
+.colors {
+  background-color: #d7abff;
+  background-color: #fad2cb;
+  background-color: #f7e61c;
+  color: #9bebd0;
+  color: #ffffff;
 }
