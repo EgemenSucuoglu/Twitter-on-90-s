@@ -3,6 +3,7 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
+import { toast } from "react-toastify";
 
 export default function SignUp() {
   //   const [email, setEmail] = useState();
@@ -19,14 +20,17 @@ export default function SignUp() {
       .post("https://wit-courses-api2.onrender.com/signup", data)
       .then((res) => {
         localStorage.setItem("twitter90s", res.data.token);
-        // toast.success("kayıt olndu");
+        toast.success("kayıt olundu");
         setTimeout(() => {
           history.push("/");
         }, 1000);
         setUser(res.data);
         localStorage.setItem("user", JSON.stringify(data));
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        toast.error("kullanici zaten var");
+      });
   }
   console.log(user);
 
